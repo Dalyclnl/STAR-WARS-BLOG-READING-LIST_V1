@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+
 const Planets = () => {
   const [planets, setPlanets] = useState([]);
 
@@ -20,17 +21,20 @@ const Planets = () => {
   return (
     <div className="container">
       <div className="row">
+
         {planets.length > 0 ? (
           planets.map((planet, index) => (
             <div key={index}>
               <h4>{planet.name}</h4>
             </div>
           ))
+          
         ) : (
           <p>Loading...</p>
         )}
-      </div>
+   
     </div>
+     </div>
   );
 };
 

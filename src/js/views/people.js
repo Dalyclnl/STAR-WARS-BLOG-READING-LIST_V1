@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Character from '../component/Character';
 
 const People = () => {
   const [people, setPeople] = useState([]);
@@ -22,8 +23,8 @@ const People = () => {
       <div className="row">
         {people.length > 0 ? (
           people.map((person, index) => (
-            <div key={index}>
-              <h4>{person.name}</h4>
+            <div key={index} className="col-12 col-md-4">
+             <Character image={person.image} name={person.name}/>
             </div>
           ))
         ) : (

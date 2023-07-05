@@ -6,6 +6,8 @@ import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import  People from "./views/people";
+import Planets from "./views/planets";
+import Starships from "./views/starships";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
@@ -29,6 +31,8 @@ const Layout = () => {
 						element={<People />} />
 						<Route path="/planets" 
 						element={<Planets />} />
+						<Route path="/starships" 
+						element={<Starships />} />
 						<Route path="/single/:theid" element={<Single />} />
 						<Route path="*" element={<h1>Not found!</h1>} />
 					</Routes>
